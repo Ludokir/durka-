@@ -30,6 +30,7 @@ class Durka(pg.sprite.Sprite):
         self.rect = self.image.get_rect(
             center=(screen_size[0] // 2, screen_size[1] // 2))
         self.speedx = 0
+        self.step = pg.mixer.music.load('sounds/move.mp3')
 
     def update(self):
         self.speedx = 0
@@ -59,6 +60,10 @@ class Durka(pg.sprite.Sprite):
             self.speedy = 4
             if self.rect.bottom >= 800:
                 self.speedy = 0
+        if keystate[pg.K_DOWN] or keystate[pg.K_UP] or keystate[pg.K_LEFT] or keystate[pg.K_RIGHT]:
+            self.step = pg.mixer.music.play()
+        else:
+            self.step = pg.mixer.music.stop()
 
         self.rect.x += self.speedx
         self.rect.y += self.speedy

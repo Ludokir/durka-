@@ -36,10 +36,10 @@ run = True
 while run:
     for e in pg.event.get():
         if e.type == pg.QUIT:
-            run = False
+            sys.exit(0)
         elif e.type == pg.KEYDOWN:
             if e.key == pg.K_ESCAPE:
-                run = False
+                sys.exit(0)
 
     screen.fill(BG)
 
