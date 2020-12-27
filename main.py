@@ -1,7 +1,6 @@
 import pygame as pg
 from os import environ
 from menu import *
-from settings import *
 
 environ['SDL_VIDEO_WINDOW_POS'] = '0,30'
 
