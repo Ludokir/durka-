@@ -60,7 +60,8 @@ class Durka(pg.sprite.Sprite):
             self.speedy = 4
             if self.rect.bottom >= 800:
                 self.speedy = 0
-        if keystate[pg.K_DOWN] or keystate[pg.K_UP] or keystate[pg.K_LEFT] or keystate[pg.K_RIGHT]:
+        if keystate[pg.K_DOWN] or keystate[pg.K_UP] or \
+                keystate[pg.K_LEFT] or keystate[pg.K_RIGHT]:
             self.step = pg.mixer.music.play()
         else:
             self.step = pg.mixer.music.stop()
