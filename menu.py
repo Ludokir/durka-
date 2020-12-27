@@ -2,7 +2,6 @@ from settings import *
 import pygame as pg
 import sys
 stop = False
-start = True
 begin = False
 
 
@@ -50,9 +49,8 @@ while run:
         bt_st('QUIT', 1350, 850, quit)
     if stop:
         settings()
-    if start:
-        name()
     if begin:
         run = False
+    name()
 
     pg.display.update()
