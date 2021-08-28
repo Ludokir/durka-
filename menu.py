@@ -7,7 +7,7 @@ begin = False
 
 def name():
     font = pg.font.Font('BebasNeue.ttf', 100)
-    font_render = font.render('ESCAPE FROM THE DURKA', True, (0, 0, 0))
+    font_render = font.render('ESCAPE FROM DURKA', True, (0, 0, 0))
     font_rect = font_render.get_rect(center=((1920 // 2), 100))
     screen.blit(font_render, font_rect)
 
